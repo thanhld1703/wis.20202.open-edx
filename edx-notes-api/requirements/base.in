@@ -1,0 +1,19 @@
+
+-c constraints.txt
+
+Django
+requests==2.22.0
+djangorestframework
+django-rest-swagger==2.1.2
+django-haystack==2.8.0
+elasticsearch>=1.0.0,<2.0.0
+django-cors-headers
+mysqlclient
+PyJWT
+gunicorn==19.1.1     # MIT
+path.py==3.0.1
+python-dateutil==2.4.0
+newrelic==4.8.0.110            # New Relic
+edx-django-release-util
+edx-django-utils
+edx-drf-extensions

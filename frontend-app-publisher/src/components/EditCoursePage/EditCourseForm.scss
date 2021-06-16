@@ -1,0 +1,15 @@
+.edit-course-form {
+  .course-image {
+    .uploaded-image {
+      max: {
+        // These match the 'small' size in course-discovery's model definition for the image field
+        width: 378px;
+        height: 225px;
+      }
+    }
+  }
+
+  .new-run-button {
+    border: 1px dashed silver;
+  }
+}

@@ -1,0 +1,62 @@
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+__pycache__
+.cache
+venv
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+reports
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Pycharm
+.idea
+
+# Vagrant
+.vagrant
+
+# Repo we cloned for page objects
+lib/edx-platform
+src
+
+# Logs and screenshots on failure
+log/*.png
+log/*.log
+
+# Local environment
+local_env.sh
+
+# OS X artifacts
+*.DS_Store
+
+# Output from tests
+geckodriver.log

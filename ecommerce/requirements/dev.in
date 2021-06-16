@@ -1,0 +1,13 @@
+-r test.txt
+-r docs.txt
+
+django-debug-toolbar
+
+# i18n
+transifex-client
+
+# Visual Studio Code Debugger
+ptvsd
+
+# For devserver code reloading
+pywatchman

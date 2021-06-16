@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RenderInputTextField renders html for number type 1`] = `
+<asInput(withDeprecatedProps(InputText))
+  dangerIconDescription=""
+  disabled={false}
+  inline={false}
+  isValid={true}
+  label="TestLabel"
+  maxLength=""
+  name="Test"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onKeyPress={[Function]}
+  pattern={null}
+  placeholder=""
+  required={false}
+  themes={
+    Array [
+      "danger",
+    ]
+  }
+  type="number"
+  validationMessage=""
+  value=""
+/>
+`;
+
+exports[`RenderInputTextField renders html for text 1`] = `
+<asInput(withDeprecatedProps(InputText))
+  dangerIconDescription=""
+  disabled={false}
+  inline={false}
+  isValid={true}
+  label="TestLabel"
+  maxLength=""
+  name="Test"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onKeyPress={[Function]}
+  pattern={null}
+  placeholder=""
+  required={false}
+  themes={
+    Array [
+      "danger",
+    ]
+  }
+  type="text"
+  validationMessage=""
+  value=""
+/>
+`;

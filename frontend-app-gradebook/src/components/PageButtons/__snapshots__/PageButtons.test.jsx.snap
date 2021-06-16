@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageButtons prev not null, next not null 1`] = `
+<div
+  className="d-flex justify-content-center"
+  style={
+    Object {
+      "paddingBottom": "20px",
+    }
+  }
+>
+  <button
+    className="btn btn-outline-primary"
+    disabled={false}
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "20px",
+      }
+    }
+    type="button"
+  >
+    Previous Page
+  </button>
+  <button
+    className="btn btn-outline-primary"
+    disabled={false}
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "20px",
+      }
+    }
+    type="button"
+  >
+    Next Page
+  </button>
+</div>
+`;
+
+exports[`PageButtons prev not null, next null 1`] = `
+<div
+  className="d-flex justify-content-center"
+  style={
+    Object {
+      "paddingBottom": "20px",
+    }
+  }
+>
+  <button
+    className="btn btn-outline-primary"
+    disabled={false}
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "20px",
+      }
+    }
+    type="button"
+  >
+    Previous Page
+  </button>
+  <button
+    className="btn btn-outline-primary"
+    disabled={true}
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "20px",
+      }
+    }
+    type="button"
+  >
+    Next Page
+  </button>
+</div>
+`;
+
+exports[`PageButtons prev null, next not null 1`] = `
+<div
+  className="d-flex justify-content-center"
+  style={
+    Object {
+      "paddingBottom": "20px",
+    }
+  }
+>
+  <button
+    className="btn btn-outline-primary"
+    disabled={true}
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "20px",
+      }
+    }
+    type="button"
+  >
+    Previous Page
+  </button>
+  <button
+    className="btn btn-outline-primary"
+    disabled={false}
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "20px",
+      }
+    }
+    type="button"
+  >
+    Next Page
+  </button>
+</div>
+`;
+
+exports[`PageButtons prev null, next null 1`] = `
+<div
+  className="d-flex justify-content-center"
+  style={
+    Object {
+      "paddingBottom": "20px",
+    }
+  }
+>
+  <button
+    className="btn btn-outline-primary"
+    disabled={true}
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "20px",
+      }
+    }
+    type="button"
+  >
+    Previous Page
+  </button>
+  <button
+    className="btn btn-outline-primary"
+    disabled={true}
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "20px",
+      }
+    }
+    type="button"
+  >
+    Next Page
+  </button>
+</div>
+`;

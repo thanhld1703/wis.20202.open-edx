@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingSpinner shows a loading spinner 1`] = `
+<div
+  className="mx-auto text-center"
+>
+  <div>
+    Loading…
+  </div>
+  <withDeprecatedProps(Icon)
+    className="fa fa-circle-o-notch fa-spin fa-3x fa-fw"
+    id="spinner"
+  />
+</div>
+`;

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RemoveButton renders correctly 1`] = `
+<button
+  aria-label="Test Label"
+  className="close float-none"
+  onClick={[Function]}
+  title="Test Label"
+  type="button"
+>
+  <withDeprecatedProps(Icon)
+    className="fa fa-close"
+    id="remove-field"
+  />
+</button>
+`;

@@ -1,0 +1,373 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders the correct header 1`] = `
+<header
+  className="site-header mb-3 py-3 border-bottom-blue"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row align-items-center"
+    >
+      <div
+        className="col-auto justify-content-start"
+      >
+        <withDeprecatedProps(Hyperlink)
+          destination="http://localhost:18010"
+        >
+          <Hyperlink
+            destination="http://localhost:18010"
+            externalLinkAlternativeText="Opens in a new window"
+            externalLinkTitle="Opens in a new window"
+            onClick={[Function]}
+            target="_self"
+          >
+            <a
+              href="http://localhost:18010"
+              onClick={[Function]}
+              target="_self"
+            >
+              <img
+                alt="edX logo"
+                height="30"
+                src="test-file-stub"
+                width="60"
+              />
+            </a>
+          </Hyperlink>
+        </withDeprecatedProps(Hyperlink)>
+      </div>
+      <div
+        className="col"
+      >
+        <Link
+          to="/"
+        >
+          <LinkAnchor
+            href="/"
+            navigate={[Function]}
+          >
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              Courses
+            </a>
+          </LinkAnchor>
+        </Link>
+      </div>
+      <div
+        className="col-auto justify-content-end"
+      >
+        <DropdownButton
+          alignRight={true}
+          title="test-username"
+          variant="light"
+        >
+          <Dropdown
+            alignRight={true}
+            navbar={false}
+          >
+            <ReactOverlaysDropdown
+              alignEnd={true}
+              itemSelector=".dropdown-item:not(.disabled):not(:disabled)"
+              onToggle={[Function]}
+            >
+              <div
+                className="dropdown"
+                onKeyDown={[Function]}
+              >
+                <DropdownToggle
+                  variant="light"
+                >
+                  <Button
+                    active={false}
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    className="dropdown-toggle"
+                    disabled={false}
+                    onClick={[Function]}
+                    variant="light"
+                  >
+                    <button
+                      aria-expanded={false}
+                      aria-haspopup={true}
+                      className="dropdown-toggle btn btn-light"
+                      disabled={false}
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      test-username
+                    </button>
+                  </Button>
+                </DropdownToggle>
+                <DropdownMenu
+                  alignRight={false}
+                  flip={true}
+                />
+              </div>
+            </ReactOverlaysDropdown>
+          </Dropdown>
+        </DropdownButton>
+      </div>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`Header renders the header correctly when toggling is allowed, and dark mode is on 1`] = `
+<header
+  className="site-header mb-3 py-3 border-bottom-blue"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row align-items-center"
+    >
+      <div
+        className="col-auto justify-content-start"
+      >
+        <withDeprecatedProps(Hyperlink)
+          destination="http://localhost:18010"
+        >
+          <Hyperlink
+            destination="http://localhost:18010"
+            externalLinkAlternativeText="Opens in a new window"
+            externalLinkTitle="Opens in a new window"
+            onClick={[Function]}
+            target="_self"
+          >
+            <a
+              href="http://localhost:18010"
+              onClick={[Function]}
+              target="_self"
+            >
+              <img
+                alt="edX logo"
+                height="30"
+                src="test-file-stub"
+                width="60"
+              />
+            </a>
+          </Hyperlink>
+        </withDeprecatedProps(Hyperlink)>
+      </div>
+      <div
+        className="col"
+      >
+        <Link
+          to="/"
+        >
+          <LinkAnchor
+            href="/"
+            navigate={[Function]}
+          >
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              Courses
+            </a>
+          </LinkAnchor>
+        </Link>
+      </div>
+      <div
+        className="col-auto justify-content-end"
+      >
+        <button
+          className="btn btn-primary"
+          onClick={[Function]}
+          type="button"
+        >
+          Switch to 
+          light mode
+        </button>
+      </div>
+      <div
+        className="col-auto justify-content-end"
+      >
+        <DropdownButton
+          alignRight={true}
+          title="test-username"
+          variant="light"
+        >
+          <Dropdown
+            alignRight={true}
+            navbar={false}
+          >
+            <ReactOverlaysDropdown
+              alignEnd={true}
+              itemSelector=".dropdown-item:not(.disabled):not(:disabled)"
+              onToggle={[Function]}
+            >
+              <div
+                className="dropdown"
+                onKeyDown={[Function]}
+              >
+                <DropdownToggle
+                  variant="light"
+                >
+                  <Button
+                    active={false}
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    className="dropdown-toggle"
+                    disabled={false}
+                    onClick={[Function]}
+                    variant="light"
+                  >
+                    <button
+                      aria-expanded={false}
+                      aria-haspopup={true}
+                      className="dropdown-toggle btn btn-light"
+                      disabled={false}
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      test-username
+                    </button>
+                  </Button>
+                </DropdownToggle>
+                <DropdownMenu
+                  alignRight={false}
+                  flip={true}
+                />
+              </div>
+            </ReactOverlaysDropdown>
+          </Dropdown>
+        </DropdownButton>
+      </div>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`Header renders the header correctly when users pass a querystring param to allow dark mode toggling 1`] = `
+<header
+  className="site-header mb-3 py-3 border-bottom-blue"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row align-items-center"
+    >
+      <div
+        className="col-auto justify-content-start"
+      >
+        <withDeprecatedProps(Hyperlink)
+          destination="http://localhost:18010"
+        >
+          <Hyperlink
+            destination="http://localhost:18010"
+            externalLinkAlternativeText="Opens in a new window"
+            externalLinkTitle="Opens in a new window"
+            onClick={[Function]}
+            target="_self"
+          >
+            <a
+              href="http://localhost:18010"
+              onClick={[Function]}
+              target="_self"
+            >
+              <img
+                alt="edX logo"
+                height="30"
+                src="test-file-stub"
+                width="60"
+              />
+            </a>
+          </Hyperlink>
+        </withDeprecatedProps(Hyperlink)>
+      </div>
+      <div
+        className="col"
+      >
+        <Link
+          to="/"
+        >
+          <LinkAnchor
+            href="/"
+            navigate={[Function]}
+          >
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              Courses
+            </a>
+          </LinkAnchor>
+        </Link>
+      </div>
+      <div
+        className="col-auto justify-content-end"
+      >
+        <button
+          className="btn btn-primary"
+          onClick={[Function]}
+          type="button"
+        >
+          Switch to 
+          dark mode
+        </button>
+      </div>
+      <div
+        className="col-auto justify-content-end"
+      >
+        <DropdownButton
+          alignRight={true}
+          title="test-username"
+          variant="light"
+        >
+          <Dropdown
+            alignRight={true}
+            navbar={false}
+          >
+            <ReactOverlaysDropdown
+              alignEnd={true}
+              itemSelector=".dropdown-item:not(.disabled):not(:disabled)"
+              onToggle={[Function]}
+            >
+              <div
+                className="dropdown"
+                onKeyDown={[Function]}
+              >
+                <DropdownToggle
+                  variant="light"
+                >
+                  <Button
+                    active={false}
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    className="dropdown-toggle"
+                    disabled={false}
+                    onClick={[Function]}
+                    variant="light"
+                  >
+                    <button
+                      aria-expanded={false}
+                      aria-haspopup={true}
+                      className="dropdown-toggle btn btn-light"
+                      disabled={false}
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      test-username
+                    </button>
+                  </Button>
+                </DropdownToggle>
+                <DropdownMenu
+                  alignRight={false}
+                  flip={true}
+                />
+              </div>
+            </ReactOverlaysDropdown>
+          </Dropdown>
+        </DropdownButton>
+      </div>
+    </div>
+  </div>
+</header>
+`;

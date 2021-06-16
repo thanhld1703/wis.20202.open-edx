@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CourseTable shows a populated table 1`] = `
+<Fragment>
+  <div
+    className="test"
+  >
+    <div
+      className="table-responsive"
+    >
+      <withDeprecatedProps(Table)
+        className="table-sm table-striped"
+        columns={
+          Array [
+            Object {
+              "columnSortable": true,
+              "key": "col1",
+              "label": "Col 1",
+              "onSort": [Function],
+            },
+            Object {
+              "columnSortable": false,
+              "key": "col2",
+              "label": "Col 2",
+              "onSort": null,
+            },
+          ]
+        }
+        data={
+          Array [
+            Object {
+              "col1": "Test11",
+              "col2": "Test12",
+            },
+            Object {
+              "col1": "Test21",
+              "col2": "Test22",
+            },
+          ]
+        }
+        defaultSortDirection="asc"
+        defaultSortedColumn="key"
+        tableSortable={true}
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`CourseTable shows a populated table after a component update for ordering 1`] = `
+<Fragment>
+  <div
+    className="test"
+  >
+    <div
+      className="table-responsive"
+    >
+      <withDeprecatedProps(Table)
+        className="table-sm table-striped"
+        columns={
+          Array [
+            Object {
+              "columnSortable": true,
+              "key": "col1",
+              "label": "Col 1",
+              "onSort": [Function],
+            },
+            Object {
+              "columnSortable": false,
+              "key": "col2",
+              "label": "Col 2",
+              "onSort": null,
+            },
+          ]
+        }
+        data={
+          Array [
+            Object {
+              "col1": "Test11",
+              "col2": "Test12",
+            },
+            Object {
+              "col1": "Test21",
+              "col2": "Test22",
+            },
+          ]
+        }
+        defaultSortDirection="desc"
+        defaultSortedColumn="key"
+        tableSortable={true}
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`CourseTable shows a populated table after a component update for page 1`] = `
+<Fragment>
+  <div
+    className="test"
+  >
+    <div
+      className="table-responsive"
+    >
+      <withDeprecatedProps(Table)
+        className="table-sm table-striped"
+        columns={
+          Array [
+            Object {
+              "columnSortable": true,
+              "key": "col1",
+              "label": "Col 1",
+              "onSort": [Function],
+            },
+            Object {
+              "columnSortable": false,
+              "key": "col2",
+              "label": "Col 2",
+              "onSort": null,
+            },
+          ]
+        }
+        data={
+          Array [
+            Object {
+              "col1": "Test11",
+              "col2": "Test12",
+            },
+            Object {
+              "col1": "Test21",
+              "col2": "Test22",
+            },
+          ]
+        }
+        defaultSortDirection="asc"
+        defaultSortedColumn="key"
+        tableSortable={true}
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`CourseTable shows a table 1`] = `<Fragment />`;
+
+exports[`CourseTable shows an empty table 1`] = `
+<Fragment>
+  <StatusAlert
+    alertType="warning"
+    className=""
+    dismissible={false}
+    iconClassNames={
+      Array [
+        "fa",
+        "fa-exclamation-circle",
+      ]
+    }
+    message="There are no results."
+    onClose={[Function]}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`CourseTable shows an error 1`] = `
+<Fragment>
+  <StatusAlert
+    alertType="danger"
+    className=""
+    dismissible={false}
+    iconClassNames={
+      Array [
+        "fa",
+        "fa-times-circle",
+      ]
+    }
+    message={
+      Array [
+        "Unable to load data: ",
+        "Test error.",
+      ]
+    }
+    onClose={[Function]}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`CourseTable shows loading 1`] = `
+<Fragment>
+  <LoadingSpinner
+    message="Loading…"
+  />
+</Fragment>
+`;

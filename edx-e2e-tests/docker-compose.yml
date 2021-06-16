@@ -1,0 +1,20 @@
+version: '2'
+services:
+  e2e-tests:
+    build: .
+    container_name: edxe2etests
+    image: edxops/e2e:latest
+    ports:
+     - "5000:5000"
+    volumes:
+      - .:/edx-e2e-tests
+  firefox:
+    image: "selenium/standalone-firefox-debug:2.53.1-beryllium"
+    ports:
+      - "4444:4444"
+      - "35900:5900"
+    environment:
+      - DBUS_SESSION_BUS_ADDRESS=/dev/null
+      - no_proxy=localhost
+    volumes:
+      - ./data:/data

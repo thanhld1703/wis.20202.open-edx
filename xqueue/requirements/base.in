@@ -1,0 +1,19 @@
+# Core requirements for using this service
+-c constraints.txt
+
+mysqlclient
+backoff
+boto3
+Django >= 1.11, <2.3
+django-storages
+edx-django-release-util
+gunicorn==0.16.1
+isort
+newrelic
+path.py==11.0.1
+python-memcached
+python-termstyle==0.1.10
+pytz
+requests
+# Pin pip to 18.1 since newer versions break tox and prevent merging
+pip==18.1
