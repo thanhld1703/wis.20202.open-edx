@@ -1,0 +1,20 @@
+.home {
+    > header {
+        background: $primary url('#{$img-path}/background.jpg') no-repeat 50% 50%;
+
+        .title {
+             .course-search {
+                 .search-button {
+                     color: $white;
+                     background: $base-color;
+
+                     &:hover,
+                     &:focus {
+                         color: $base-color;
+                         background: $white;
+                     }
+                 }
+             }
+        }
+    }
+}

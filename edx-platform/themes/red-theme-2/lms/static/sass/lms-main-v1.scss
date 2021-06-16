@@ -1,7 +1,5 @@
-// LMS - CSS application architecture
-// Version 1 styling (pre-Pattern Library)
-// ====================
 
-@import 'build-base-v1';
-@import 'build-lms-v1'; // shared app style assets/rendering
-
+@import "override-colors";
+@import "lms/static/sass/bootstrap/lms-main";
+@import "lms/static/sass/lms-main-v1";
+@import "main-v1";

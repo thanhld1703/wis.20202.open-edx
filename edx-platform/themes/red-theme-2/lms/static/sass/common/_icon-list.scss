@@ -1,0 +1,31 @@
+.icon-list {
+    display: flex;
+    align-items: center;
+    margin: 0 auto 15px;
+    padding: 0;
+    list-style: none;
+    @media screen and (min-width: 800px) {
+        margin-bottom: 0;
+    }
+}
+.icon-list_item {
+    margin: 0 4px;
+}
+.icon-list_icon {
+    width: 35px;
+    height: 35px;
+}
+
+#ico-vk,
+#ico-odnoklassniki,
+#ico-behance,
+#ico-vimeo,
+#ico-youtube,
+#ico-linkedin,
+#ico-twitter,
+#ico-instagramm,
+#ico-facebook {
+    path {
+        fill: $footer-social-link-bg;
+    }
+}
