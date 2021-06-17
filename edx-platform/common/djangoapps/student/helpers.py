@@ -346,7 +346,6 @@ def _get_redirect_to(request_host, request_headers, request_params, request_is_h
                 u"Unsafe redirect parameter detected after login page: '%(redirect_to)s'",
                 {"redirect_to": redirect_to}
             )
-            redirect_to = None
         elif not accepts_text_html:
             log.info(
                 u"Redirect to non html content '%(content_type)s' detected from '%(user_agent)s'"
