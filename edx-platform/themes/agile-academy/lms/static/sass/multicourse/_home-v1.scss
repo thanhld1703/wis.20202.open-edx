@@ -10,7 +10,7 @@
 
                     &:hover,
                     &:focus {
-                        color: $base-color;
+                        color: rgb(170, 170, 12);
                         background: $white;
                     }
                 }
@@ -37,7 +37,7 @@
                     // STATE: hover and focus
                     &:hover,
                     &:focus {
-                        background: $base-color;
+                        background: rgb(170, 170, 12);
                     }
                 }
             }
