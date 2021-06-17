@@ -2,6 +2,7 @@
 $blue: #009be0;
 $green: #00b06d;
 $base-color: $green;
+
 $btn-bg-hover: lighten($base-color, 20%);
 
 $link-color: $base-color;
@@ -23,17 +24,17 @@ $pink: red;
 //body background
 $body-bg: #eee;
 //settings for header
-$header-nav-link-color: #009b60;
+$header-nav-link-color: saturate($base-color, 20%);
 $header-nav-link-color-hover: lighten($header-nav-link-color, 20%);
 $header-background: #fff;
 $dropdown-menu-background: #9da5ac;
-$dropdown-menu-color: #009b60;
+$dropdown-menu-color: saturate($base-color, 20%);
 $dropdown-menu-color-hover: lighten($dropdown-menu-color, 20%);
 //logo
 $logo-width: 37px;
 $logo-height: 37px;
 //settings for hamburger
-$hamburger-color: #009b60;
+$hamburger-color: saturate($base-color, 20%);
 $hamburger-width: 40px;
 $hamburger-height: 30px;
 $hamburger-height-line: 3px;
@@ -51,13 +52,13 @@ $search-input-color: #fff;
 $search-input-border: #fff;
 $search-button-color: $base-color;
 //settings for footer
-$footer-bg: #009269;
+$footer-bg: saturate($base-color, 40%);
 $footer-nav-link-color: #fff;
 $footer-nav-link-color-hover: rgba(255,255,255, .8);
 $footer-support-text-and-logo: #fff;
 $footer-social-link-bg: #fff;
 //btn
-$theme-btn-bg: #009b60;
+$theme-btn-bg: saturate($base-color, 20%);
 $theme-btn-text-color: #fff;
 $theme-btn-bg-hover: lighten($theme-btn-bg, 20%);
 $theme-btn-text-color-hover: #fff;
@@ -79,7 +80,7 @@ $theme-input-icon: #fc6a15;
 $theme-user-link: #3c3c3c;
 $theme-user-link-hover: lighten($theme-user-link, 20%);
 //settings fo courses on main page and search
-$courses-border-color: #009b60;
+$courses-border-color: saturate($base-color, 20%);
 $course-hover-bg: rgba(0, 0, 0, .5);
 $course-link-color: $theme-link;
 $course-bg: #fff;
