@@ -1,17 +1,19 @@
 ## mako
 <%page expression_filter="h"/>
-<%namespace name='static' file='static_content.html'/>
 <%!
 from django.urls import reverse
 from django.utils.translation import ugettext as _
-from django.conf import settings
+from lms.djangoapps.branding.api import get_footer
+from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
 
 from datetime import datetime
 import pytz
-
-from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
+from django.conf import settings
 from openedx.core.djangolib.markup import HTML, Text
 %>
+<% footer = get_footer(is_secure=is_secure) %>
+<% icp_license_info = getattr(settings, 'ICP_LICENSE_INFO', {})%>
+<%namespace name='static' file='static_content.html'/>
 
 <div class="wrapper wrapper-footer">
   <footer id="footer-openedx" class="grid-container"
@@ -32,11 +34,9 @@ from openedx.core.djangolib.markup import HTML, Text
             % endfor
         </ol>
       </nav>
-
       % if context.get('include_language_selector', footer_language_selector_is_enabled()):
           <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
       % endif
-
       <div class="wrapper-logo">
         <p>
           <a href="/">
@@ -44,7 +44,6 @@ from openedx.core.djangolib.markup import HTML, Text
           </a>
         </p>
       </div>
-
       ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
         <p class="copyright">${footer['copyright']}
             % if icp_license_info.get('icp_license'):
@@ -54,7 +53,6 @@ from openedx.core.djangolib.markup import HTML, Text
               </a>
             % endif
         </p>
-
       <nav class="nav-legal" aria-label="${_('Legal')}">
         <ul>
           % for item_num, link in enumerate(footer['legal_links'], start=1):
@@ -66,7 +64,6 @@ from openedx.core.djangolib.markup import HTML, Text
         </ul>
       </nav>
     </div>
-
     ## Please leave this link and use one of the logos provided
     ## The OpenEdX link may be hidden when this view is served
     ## through an API to partner sites (such as marketing sites or blogs),
@@ -82,3 +79,18 @@ from openedx.core.djangolib.markup import HTML, Text
     % endif
   </footer>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
