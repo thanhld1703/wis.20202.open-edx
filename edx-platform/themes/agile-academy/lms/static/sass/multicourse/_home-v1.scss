@@ -7,7 +7,6 @@
                 .search-button {
                     color: $white;
                     background: $base-color;
-
                     &:hover,
                     &:focus {
                         color: white;
@@ -26,7 +25,6 @@
                     // STATE: focus
                     &:focus {
                         @extend %no-outline;
-
                         border-color: $base-color;
                     }
                 }
