@@ -1,20 +1,46 @@
 .home {
     > header {
-        background: $primary url('#{$img-path}/background.jpg') no-repeat 50% 50%;
+        background: $primary url("#{$img-path}/background.jpg") no-repeat 50% 50%;
 
         .title {
-             .course-search {
-                 .search-button {
-                     color: $white;
-                     background: $base-color;
+            .course-search {
+                .search-button {
+                    color: $white;
+                    background: $base-color;
 
-                     &:hover,
-                     &:focus {
-                         color: $base-color;
-                         background: $white;
-                     }
-                 }
-             }
+                    &:hover,
+                    &:focus {
+                        color: $base-color;
+                        background: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+.home {
+    > header {
+        .title {
+            .course-search {
+                .search-input {
+                    // STATE: focus
+                    &:focus {
+                        @extend %no-outline;
+
+                        border-color: $base-color;
+                    }
+                }
+
+                .search-button {
+                    border: 2px solid $base-color;
+
+                    // STATE: hover and focus
+                    &:hover,
+                    &:focus {
+                        background: $base-color;
+                    }
+                }
+            }
         }
     }
 }

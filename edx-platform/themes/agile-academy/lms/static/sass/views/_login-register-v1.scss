@@ -1,0 +1,33 @@
+.login-register-content {
+    h2 {
+      color: $base-color;
+    }
+  
+    h3 {
+      color: $uxpl-gray-dark;
+    }
+  
+    a,
+    label {
+      @extend %expand-clickable-area;
+    }
+  
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .login-provider {
+    .icon {
+      background: $base-color;
+    }
+    &:hover,
+    &:focus {
+      background-image: none;
+      .icon {
+        top: 0;
+        bottom: 0;
+        line-height: ($third-party-button-height - 2px);
+      }
+    }
+  }

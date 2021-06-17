@@ -11,3 +11,30 @@
         }
     }
 }
+
+.facet-option {
+
+    //STATE: hover, focus
+    &:hover,
+    &:focus {
+      background: #f05b25;
+      color: #ffff00;
+      text-decoration: none;
+
+      .count {
+        color: #ffff00;
+      }
+    }
+
+    //STATE: selected (hover, focus)
+    &.selected,
+    &.selected:hover,
+    &.selected:focus {
+        background: #f05b25;
+        color: #ffff00;
+
+      .count::before {
+        color: #ffff00;
+      }
+    }
+  }
