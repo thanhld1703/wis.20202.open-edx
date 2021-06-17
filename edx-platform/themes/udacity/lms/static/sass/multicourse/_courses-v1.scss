@@ -1,0 +1,13 @@
+.find-courses {
+    .discovery-submit {
+        border-color: $base-color;
+        color: $white;
+        background: $base-color;
+        &:hover,
+        &:active,
+        &:focus {
+            border: 2px solid $base-color;
+            background: rgba($base-color, 0.8);
+        }
+    }
+}
