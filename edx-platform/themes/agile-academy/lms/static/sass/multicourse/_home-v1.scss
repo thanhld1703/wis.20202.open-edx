@@ -10,8 +10,8 @@
 
                     &:hover,
                     &:focus {
-                        color: rgb(170, 170, 12);
-                        background: $white;
+                        color: white;
+                        background: rgb(170, 170, 12);
                     }
                 }
             }
@@ -28,16 +28,6 @@
                         @extend %no-outline;
 
                         border-color: $base-color;
-                    }
-                }
-
-                .search-button {
-                    border: 2px solid $base-color;
-
-                    // STATE: hover and focus
-                    &:hover,
-                    &:focus {
-                        background: rgb(170, 170, 12);
                     }
                 }
             }
