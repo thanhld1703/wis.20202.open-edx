@@ -9,8 +9,9 @@
                     background: $base-color;
                     &:hover,
                     &:focus {
-                        color: white;
-                        background: rgb(170, 170, 12);
+                        border: 1px solid yellow;
+                        color: rgb(244, 252, 212);
+                        background: yellow;
                     }
                 }
             }
