@@ -1,0 +1,26 @@
+// header button index
+.not-signedin,
+.view-util {
+    .wrapper-header {
+        .nav-pitch {
+            .action-signup {
+                &:hover,
+                &:focus {
+                    color: white;
+                    background: $base-color;
+                }
+            }
+        }
+    }
+}
+// header link
+.wrapper-header {
+    nav {
+        .nav-item a {
+            color: $base-color;
+            &:hover {
+                color:#065683;
+            }
+        }
+    }
+}

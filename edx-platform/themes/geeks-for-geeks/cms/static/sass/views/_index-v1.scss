@@ -1,0 +1,72 @@
+// hello wrapper
+.view-howitworks {
+    &.not-signedin {
+        .wrapper-content-header {
+            @include linear-gradient($orange-l1, $orange, $orange-d1);
+        }
+    }
+}
+// hello content
+.view-howitworks {
+    &.not-signedin {
+        .content-header {
+            h1 {
+                border-bottom: 1px solid yellow;
+            }
+            .tagline {
+                color: $base-color;
+            }
+        }
+    }
+}
+// image hover
+.view-howitworks {
+    &.not-signedin {
+        .content-features {
+            .feature {
+                .img {
+                    a {
+                        &:hover {
+                            border-color: $base-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// popup icon
+.view-howitworks {
+    &.not-signedin {
+        .content-features {
+            .feature {
+                .img {
+                    a {
+                        .action-zoom {
+                            .icon {
+                                background: $base-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//action button hover
+.view-howitworks {
+    &.not-signedin {
+        .content-cta {
+            .list-actions {
+                .action {
+                    &.action-primary {
+                        &:hover {
+                            background: rgb(197, 211, 6);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

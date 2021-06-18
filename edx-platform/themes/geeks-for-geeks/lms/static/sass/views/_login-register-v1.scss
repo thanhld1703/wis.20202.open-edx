@@ -1,0 +1,14 @@
+.login-register-content {
+    h2 {
+      color: $base-color;
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .login-provider {
+    .icon {
+      background: $base-color;
+    }
+  }
