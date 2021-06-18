@@ -1,0 +1,12 @@
+.search-bar {
+    .search-button,
+    .cancel-button,
+    .search-button:hover,
+    .cancel-button:hover {
+        &:hover,
+        &:focus,
+        &:active {
+            background: rgb(4, 114, 4);
+        }
+    }
+}

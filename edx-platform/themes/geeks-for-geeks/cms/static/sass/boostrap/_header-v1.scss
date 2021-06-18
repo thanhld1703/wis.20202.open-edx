@@ -1,0 +1,9 @@
+.wrapper-header {
+    .info-course {
+        .course-link {
+            &:hover {
+                color: $base-color;
+            }
+        }
+    }
+}
