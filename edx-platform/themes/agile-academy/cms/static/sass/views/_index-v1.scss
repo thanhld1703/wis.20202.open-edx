@@ -70,3 +70,13 @@
         }
     }
 }
+// tag line bellow hello
+.view-howitworks {
+    &.not-signedin {
+        .content-header {
+            .tagline {
+                color: white;
+            }
+        }
+    }
+}
