@@ -317,7 +317,7 @@ GOOGLE_ANALYTICS_TRACKING_ID: ''
 GOOGLE_SITE_VERIFICATION_ID: ''
 GRADES_DOWNLOAD:
     BUCKET: ''
-    ROOT_PATH: ''
+    ROOT_PATH: /tmp/edx-s3/grades
     STORAGE_CLASS: django.core.files.storage.FileSystemStorage
     STORAGE_KWARGS:
         location: /tmp/edx-s3/grades

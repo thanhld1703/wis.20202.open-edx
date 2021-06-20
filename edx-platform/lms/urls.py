@@ -919,6 +919,10 @@ if settings.DEBUG:
         settings.PROFILE_IMAGE_BACKEND['options']['base_url'],
         document_root=settings.PROFILE_IMAGE_BACKEND['options']['location']
     )
+    urlpatterns += static(
+        settings.GRADES_DOWNLOAD['STORAGE_KWARGS']['location'],
+        document_root=settings.GRADES_DOWNLOAD['STORAGE_KWARGS']['location']
+    )
 
 # UX reference templates
 urlpatterns += [
