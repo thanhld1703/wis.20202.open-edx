@@ -7,6 +7,7 @@
                 .search-button {
                     color: $white;
                     background: $base-color;
+                    border: 1px solid $orange;
                     &:hover,
                     &:focus {
                         border: 1px solid yellow;
