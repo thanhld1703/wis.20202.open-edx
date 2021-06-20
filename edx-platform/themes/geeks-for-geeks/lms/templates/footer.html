@@ -16,70 +16,74 @@ from openedx.core.djangolib.markup import HTML, Text
 <%namespace name='static' file='static_content.html'/>
 
 <div class="wrapper wrapper-footer">
-  <footer id="footer-openedx" class="grid-container"
-    ## When rendering the footer through the branding API,
-    ## the direction may not be set on the parent element,
-    ## so we set it here.
-    % if bidi:
-      dir=${bidi}
-    % endif
-  >
-    <div class="colophon">
-      <nav class="nav-colophon" aria-label="${_('About')}">
-        <ol>
-            % for item_num, link in enumerate(footer['navigation_links'], start=1):
-            <li class="nav-colophon-0${item_num}">
-              <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
-            </li>
-            % endfor
-        </ol>
-      </nav>
-      % if context.get('include_language_selector', footer_language_selector_is_enabled()):
-          <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
-      % endif
-      <div class="wrapper-logo">
+  <footer id="footer-openedx" style="display:flex; justify-content: center; gap: 15px;" >
+
+    <div class="wrapper-logo" style="padding: 0px 50px 0px 50px">
         <p>
           <a href="/">
             <img alt="${_('organization logo')}" src="${static.url('images/logo.png')}">
           </a>
         </p>
-      </div>
-      ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
-        <p class="copyright">${footer['copyright']}
-            % if icp_license_info.get('icp_license'):
-              ${u" | {text}".format(text=icp_license_info.get('text'))}
-              <a href="${icp_license_info.get('icp_license_link', '#')}">
-                  ${u" {icp}".format(icp=icp_license_info.get('icp_license'))}
-              </a>
-            % endif
-        </p>
-      <nav class="nav-legal" aria-label="${_('Legal')}">
-        <ul>
-          % for item_num, link in enumerate(footer['legal_links'], start=1):
-            <li class="nav-legal-0${item_num}">
-              <a href="${link['url']}">${link['title']}</a>
+    </div>
+    <div style="padding: 0px 50px 0px 50px">
+
+      <nav class="nav-colophon" aria-label="About">
+        <ol>
+            <li style="color:grey;  padding-bottom: 20px; font-weight: bold;">edX</li>
+            <li class="nav-colophon-01">
+              <a id="about" href="http://devstack.vn:18000/about" style="font-size: small;">About</a>
             </li>
-          % endfor
-          <li><a href="${footer['edx_org_link']['url']}">${footer['edx_org_link']['text']}</a></li>
-        </ul>
+        </ol>
       </nav>
     </div>
-    ## Please leave this link and use one of the logos provided
-    ## The OpenEdX link may be hidden when this view is served
-    ## through an API to partner sites (such as marketing sites or blogs),
-    ## which are not technically powered by OpenEdX.
-    % if not hide_openedx_link:
-    <div class="footer-about-openedx">
-      <p>
-        <a href="${footer['openedx_link']['url']}">
-          <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="175" />
-        </a>
-      </p>
+    
+    <div style="padding: 0px 50px 0px 50px">
+      <nav class="nav-colophon" aria-label="About">
+        <ol>
+            <li style="color:grey; padding-bottom: 20px; font-weight: bold;">Legal</li>
+            <li class="nav-colophon-02">
+              <a href="http://devstack.vn:18000/tos_and_honor" style="font-size: small;">Terms of Service &amp; <br> Honor Code</a>
+            </li>
+            <li class="nav-colophon-03">
+              <a href="http://devstack.vn:18000/privacy"  style="font-size: small;">Privacy Policy</a>
+            </li>
+        </ol>
+      </nav>
     </div>
-    % endif
+    
+    <div style="padding: 0px 50px 0px 50px">
+      <nav class="nav-colophon" aria-label="About">
+        <ol>
+            <li style="color:grey; padding-bottom: 20px; font-weight: bold;">Connect</li>
+            <li class="nav-colophon-02">
+              <a id="blog" href="http://devstack.vn:18000/blog" style="font-size: small;">Blog</a>
+            </li>
+            <li class="nav-colophon-03">
+              <a id="contact" href="http://devstack.vn:18000/support/contact_us" style="font-size: small;">Contact</a>
+            </li>
+            <li>
+            <a id="donate" href="http://devstack.vn:18000/donate" style="font-size: small;">Donate</a>
+            </li>
+          </ol>
+        </nav>
+    </div>
+
+    <div>
+      <nav class="nav-colophon" aria-label="About">
+      <ol>
+        <li style="padding-bottom: 20px;">
+          <i class="fa fa-facebook-square fa-2x" aria-hidden="true" style="color: #00b06d; padding-right: 5px;"></i>
+          <i class="fa fa-twitter-square fa-2x" aria-hidden="true" style="color: #00b06d; padding-right: 5px;"></i>
+          <i class="fa fa-linkedin-square fa-2x" aria-hidden="true" style="color: #00b06d; padding-right: 5px;"></i>
+          <i class="fa fa-instagram fa-2x" aria-hidden="true" style="color: #00b06d; padding-right: 5px;"></i>
+          <i class="fa fa-reddit-square fa-2x" aria-hidden="true" style="color: #00b06d; padding-right: 5px;"></i>
+        </li>
+        <li><p class="copyright">GeeksforGeeks</p></li>
+      </ol>
+    </nav>
+    </div>
   </footer>
 </div>
-
 
 
 
