@@ -71,7 +71,7 @@ def _footer_social_links():
     return links
 ```
 ### <u>Test</u>
-1. Go to admin Site configuration page on `<edx-host>:18000/admin`
+1. Go to admin Site configuration page on `<edx-host>:18000/admin/site_configuration/siteconfiguration/`
 2. Change the site configuration by modify the json content. In this case, we want to configure the social media footer,
  thus we add these following data:
 ```json
