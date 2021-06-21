@@ -55,11 +55,22 @@ In order to override the default style of the project, we need to mirror the scs
 - The remaining works is just to nitpicking the components that have not been successfully changed color and mirror the files responsible for their styling and write the override code to fully change their style. This works will also become very simple now since the Geeks for Geeks theme have provided almost all of the necessary files as well as structure that need to be changed and we only need to cover very few if any component.
 
 ## HTML Templates
-As can be seen from the theme structure, our theme changed 4 html files each for a different reason:
-- header.html: changing the header content
-- main.html: fixing the title of website (original title failed to get the platform name)
-- index.html: adding the background image to the Welcome to Site div
-- footer.html: changing footer style, adding social links, fixing logo import 
+The templates file we used to create our theme is cloned from edx.org theme and red-theme. 
+
+However, we made some modifications to enable the dynamic data loading of the pages, including
+- main.html: Change the code that dislay the Platform (Site) name, so it can retrieve the Platform Name from the Site 
+  Configuration instead of hardcoded the name of the organization.
+  ```python
+   <h1>${_(HTML("Free courses from <strong>{org_name}</strong>")).format(org_name=configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME))}</h1>  
+  ```
+- index.html: 
+  - Change to archive same goal as main.html
+  - Add the background image to the Welcome to Site area, helping it more attractive
+- footer.html: 
+  - Change to archive same goal as main.html.
+  - Enhance footer style and fix bugs related to display Logo
+  - Add dynamic social links that can be retrieved fully from the Site Configuration.
+[Insert report about SOCIAL FOOTER here](FEATURE_SOCIAL-FOOTER.md)
 
 
 ## Theme installation
