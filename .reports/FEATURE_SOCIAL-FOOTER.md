@@ -2,8 +2,8 @@ CUSTOMIZATION: SOCIAL NETWORK URL
 
 The get_footer function which is shared in all footer GUI part provides a subsection, called social_links. This section 
 display the social media associated with the current site, helping promote popularity and accessibility of the site. 
-However, the current source code prevent the good as it always loads the default configuration, which contains nothing useful,
-so we modify the api for footer to enable the dynamic.
+However, the current source code prevents the good as it always loads the default configuration, which contains nothing useful,
+so we modify the API used for footer to enable the dynamic.
 
 // insert illustration of bug
 
@@ -48,7 +48,8 @@ def _footer_social_links():
 - Because the current code reads from only the concrete configuration, dynamic site updates show no works.
 
 ### <u>Solution</u>
-- Change the code into the following snippet:
+- Change the code into the following snippet. As quickly explained, the code looks up the dynamic site configurations 
+first, before falling back to the default.
 ```python
 def _footer_social_links():
     platform_name = configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME)

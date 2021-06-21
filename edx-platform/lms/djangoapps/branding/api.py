@@ -159,16 +159,18 @@ def _footer_social_links():
     Returns: list
 
     """
-    platform_name = configuration_helpers.get_value('platform_name', settings.PLATFORM_NAME)
+    platform_name = configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME)
+    social_names = configuration_helpers.get_value('SOCIAL_MEDIA_FOOTER_NAMES', settings.SOCIAL_MEDIA_FOOTER_NAMES)
+    social_displays = configuration_helpers.get_value('SOCIAL_MEDIA_FOOTER_DISPLAY', settings.SOCIAL_MEDIA_FOOTER_NAMES)
     links = []
 
-    for social_name in settings.SOCIAL_MEDIA_FOOTER_NAMES:
-        display = settings.SOCIAL_MEDIA_FOOTER_DISPLAY.get(social_name, {})
+    for social_name in social_names:
+        display = social_displays.get(social_name, {})
         links.append(
             {
                 "name": social_name,
                 "title": six.text_type(display.get("title", "")),
-                "url": settings.SOCIAL_MEDIA_FOOTER_URLS.get(social_name, "#"),
+                "url": six.text_type(display.get("url", "#")),
                 "icon-class": display.get("icon", ""),
                 "action": six.text_type(display.get("action", "")).format(platform_name=platform_name),
             }
