@@ -84,9 +84,9 @@ def _footer_social_links():
   "SOCIAL_MEDIA_FOOTER_DISPLAY": {
     "facebook": {
       "title": "Facebook",
-      "icon-class": "fa-facebook-square",
-      "url": "https://www.facebook.com/hocvienagile",
-      "action": "Like {platform_name} on Facebook"
+      "icon": "fa-facebook-square",
+      "url": "https://facebook.com/hocvienagile",
+      "action": "u'Like {platform_name} on Facebook'"
     }
   }
 }
