@@ -26,7 +26,9 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 from openedx.core.djangolib.js_utils import dump_js_escaped_json, js_escaped_string
 from openedx.core.release import RELEASE_LINE
 from common.djangoapps.pipeline_mako import render_require_js_path_overrides
-
+from django.conf import settings
+from django.utils.translation import ugettext as _
+from openedx.core.djangolib.markup import HTML
 %>
 <!DOCTYPE html>
 <!--[if lte IE 9]><html class="ie ie9 lte9" lang="${LANGUAGE_CODE}"><![endif]-->
