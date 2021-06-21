@@ -112,7 +112,7 @@
                              <ul class="list-inline list-unstyled social">
                                     % for link in footer['social_links']:
                                     <li>
-                                        <a href="${link['url']}" class="social-links external" title="${link['title']}" rel="noreferrer">
+                                        <a onclick="window.open('${link[`url`]}')" href="${link['url']}" class="social-links external" title="${link['title']}" rel="noreferrer">
                                             <span class="icon fa ${link['icon-class']}" aria-hidden="true"></span>
                                             <span class="sr">${link['action']}</span>
                                         </a>
