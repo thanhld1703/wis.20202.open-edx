@@ -6,9 +6,8 @@ shortages of configuration.
 
 // insert illustration of bug
 
-### <u>Solution</u>
-1. Modify devstack.yml
-- Open `edx-platform/lms/devsatck.yml` and looking for the section of `GRADES_DOWNLOAD`. In my case, it is
+### <u>Explanation</u>
+- The configuration for the report storage is GRADES_DOWNLOAD (You can find it in `edx-platform/lms/devsatck.yml`)
 ```yaml
 GRADES_DOWNLOAD:
     BUCKET: ''
@@ -18,6 +17,35 @@ GRADES_DOWNLOAD:
         location: /tmp/edx-s3/grades 
     STORAGE_TYPE: ''
 ```
+- The configuration is later loaded by `/edx-platform/lms/djangoapps/instructor_task/models.py`. This module will create
+   url to download. The critical code is
+```python
+    def from_config(cls, config_name):
+        """
+        By default, the default file storage specified by the `DEFAULT_FILE_STORAGE`
+        setting will be used. To configure the storage used, add a dict in
+        settings with the following fields::
+
+            STORAGE_CLASS : The import path of the storage class to use. If
+                            not set, the DEFAULT_FILE_STORAGE setting will be used.
+            STORAGE_KWARGS : An optional dict of kwargs to pass to the storage
+                             constructor. This can be used to specify a
+                             different S3 bucket or root path, for example.
+
+        Reference the setting name when calling `.from_config`.
+        """
+        return cls(
+            getattr(settings, config_name).get('STORAGE_CLASS'),
+            getattr(settings, config_name).get('STORAGE_KWARGS'),
+        )
+```
+- Because the current configuration lacked few essential parameters, Django used the default parameter, which results in
+  wrong builds of URLs.
+
+### <u>Solution</u>
+1. Modify devstack.yml of LMS module
+- Open `edx-platform/lms/devsatck.yml` and looking for the section of `GRADES_DOWNLOAD`. In my case, it is
+
 - Fill the section `STORAGE_KWARGS`
 ```yaml
     STORAGE_KWARGS:
