@@ -57,5 +57,18 @@ As can be seen from the theme structure, our theme changed 4 html files each for
 - footer.html: changing footer style, adding social links, fixing logo import 
 
 
-## Theme instalation
-//TODO
+## Theme installation
+To deploy the themes onto the Docker stack, execute the following step in orders:
+1. Copy the theme folder into the `edx-platform/themes` directory or `edx-themes/platform` directory
+    ```bash
+    cp -R /path/of/theme-name /hust-edutech/edx-platform/themes/theme-name
+    cp -R /path/of/theme-name /hust-edutech/themes/edx-platform/theme-name
+    ```
+2. Tell the services to update static assets of the new theme by changing position to `devstack` directory and run the 
+   following commands:
+    ```bash
+    make dev.static.lms && make lms-restart
+    make dev.static.studio && make studio-restart  
+    ```
+3. To switch to the target theme, go to `<edx-host>:18000/admin/theming/sitetheme/` and edit the theme-dir-name of the 
+corresponding site to the name of the theme folder.
