@@ -6,7 +6,7 @@ shortages of configuration.
 
 // insert illustration of bug
 
-### Solution
+### <u>Solution</u>
 1. Modify devstack.yml
 - Open `edx-platform/lms/devsatck.yml` and looking for the section of `GRADES_DOWNLOAD`. In my case, it is
 ```yaml
