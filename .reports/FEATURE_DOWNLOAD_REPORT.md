@@ -55,13 +55,13 @@ GRADES_DOWNLOAD:
 2. Modify urls.py of LMS module
 - Open `edx-platform/lms/urls.py` and looking for the section of static URL (about line 900 and under `if settings.DEBUG `).
 In my case, it is
-```python.
+```python
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 ```
 - Add these following code under the section
-```
+```python
     urlpatterns += static(
         settings.GRADES_DOWNLOAD['STORAGE_KWARGS']['base_url'],
         document_root=settings.GRADES_DOWNLOAD['STORAGE_KWARGS']['location']
