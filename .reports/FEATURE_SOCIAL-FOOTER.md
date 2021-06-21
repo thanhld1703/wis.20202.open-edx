@@ -73,7 +73,7 @@ def _footer_social_links():
 ### <u>Test</u>
 1. Go to admin Site configuration page on `<edx-host>:18000/admin/site_configuration/siteconfiguration/`
 2. Change the site configuration by modify the json content. In this case, we want to configure the social media footer,
- thus we add these following data:
+ thus we add these following data and the result is supposed to be
 ```json
 {
   "COURSE_CATALOG_API_URL": "http://edx.devstack.discovery:18381/api/v1/",
