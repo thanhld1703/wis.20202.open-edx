@@ -39,6 +39,7 @@ Our theme structure is developed from the recommended theme structure from the o
 ## Images
 Images is substituted simply by placing the new image at the right place
 in the theme directory  lms/static/images/logo.png then, the image is overridden.
+
 We also provide an addition to the LMS home page by adding a background image for the Welcome To Site component in the LMS landing page as well as changing the favicon.icon file for the header of our custom theme.
 
 ## Sass/CSS
@@ -50,11 +51,22 @@ In order to override the default style of the project, we need to mirror the scs
 - Finally, in order to change these components, we need to search for their names in the original LMS folder, then, we will have to mirror the files responsible for the styling of these components (same folder structure also) and write the overriding part to success fully change the style of said components.
 
 ## HTML Templates
-As can be seen from the theme structure, our theme changed 4 html files each for a different reason:
-- header.html: changing the header content
-- main.html: fixing the title of website (original title failed to get the platform name)
-- index.html: adding the background image to the Welcome to Site div
-- footer.html: changing footer style, adding social links, fixing logo import 
+The templates file we used to create our theme is cloned from edx.org theme and red-theme. 
+
+However, we made some modifications to enable the dynamic data loading of the pages, including
+- main.html: Change the code that dislay the Platform (Site) name, so it can retrieve the Platform Name from the Site 
+  Configuration instead of hardcoded the name of the organization.
+  ```python
+   <h1>${_(HTML("Free courses from <strong>{org_name}</strong>")).format(org_name=configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME))}</h1>  
+  ```
+- index.html: 
+  - Change to archive same goal as main.html
+  - Add the background image to the Welcome to Site area, helping it more attractive
+- footer.html: 
+  - Change to archive same goal as main.html.
+  - Enhance footer style and fix bugs related to display Logo
+  - Add dynamic social links that can be retrieved fully from the Site Configuration.
+[Insert report about SOCIAL FOOTER here](FEATURE_SOCIAL-FOOTER.md)
 
 
 ## Theme installation
